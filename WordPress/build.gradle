@@ -224,7 +224,7 @@ android.buildTypes.all { buildType ->
         // ... copy example file.
         if (!file(System.getenv("BUDDYBUILD_SECURE_FILES") + "/google-services.json").exists()) {
             tasks.copyGoogleServicesExampleFile.execute()
-        // ... copy Buddybuild file.
+            // ... copy Buddybuild file.
         } else {
             tasks.copyGoogleServicesBuddybuildFile.execute()
         }

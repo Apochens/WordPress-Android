@@ -11,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AlertDialog;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.ContextThemeWrapper;
 import android.view.View;
@@ -163,6 +164,11 @@ public class LoginEmailFragment extends LoginBaseFormFragment<LoginListener> imp
                     if (mLoginListener.getLoginMode() == LoginMode.JETPACK_STATS) {
                         mLoginListener.loginViaWpcomUsernameInstead();
                     } else {
+
+                        /** Themis-#6986 */
+                        Log.i("Themis-#6986", "Step 2: Clicked \""+getString(R.string.enter_site_address_instead)+"\" in the email login page.");
+                        /** Themis-#6986 */
+
                         mLoginListener.loginViaSiteAddress();
                     }
                 }

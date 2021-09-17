@@ -10,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -162,6 +163,10 @@ public class LoginSiteAddressFragment extends LoginBaseFormFragment<LoginListene
 
         String cleanedXmlrpcSuffix = UrlUtils.removeXmlrpcSuffix(mRequestedSiteAddress);
         mDispatcher.dispatch(SiteActionBuilder.newFetchWpcomSiteByUrlAction(cleanedXmlrpcSuffix));
+
+        /** Themis-#7182 */
+        Log.i("Themis-#7182", "Step 3: Clicked \"NEXT\" in site address login.");
+        /** Themis-#7182 */
 
         startProgress();
     }

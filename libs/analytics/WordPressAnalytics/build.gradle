@@ -1,6 +1,7 @@
 buildscript {
     repositories {
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -14,8 +15,9 @@ apply plugin: 'com.novoda.bintray-release' // must be applied after your artifac
 apply plugin: 'jacoco'
 
 repositories {
+    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/google'}
     google()
-    jcenter()
 }
 
 dependencies {

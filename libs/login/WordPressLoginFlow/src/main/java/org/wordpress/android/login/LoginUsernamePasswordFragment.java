@@ -1,6 +1,7 @@
 package org.wordpress.android.login;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
@@ -9,6 +10,7 @@ import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
@@ -211,6 +213,15 @@ public class LoginUsernamePasswordFragment extends LoginBaseFormFragment<LoginLi
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        /** Themis-#7182 */
+        int ori = this.getResources().getConfiguration().orientation;
+        if (ori == Configuration.ORIENTATION_LANDSCAPE) {
+            Log.i("Themis-#7182", "Step 4: Changed screen to landscape.");
+
+        }
+        /** Themis-#7182 */
+
+
         mInputSiteAddress = getArguments().getString(ARG_INPUT_SITE_ADDRESS);
         mEndpointAddress = getArguments().getString(ARG_ENDPOINT_ADDRESS);
         mSiteName = getArguments().getString(ARG_SITE_NAME);
@@ -285,6 +296,14 @@ public class LoginUsernamePasswordFragment extends LoginBaseFormFragment<LoginLi
         mOldSitesIDs = SiteUtils.getCurrentSiteIds(mSiteStore, false);
 
         if (mIsWpcom) {
+
+            /** Themis-#7182 */
+            int ori = this.getResources().getConfiguration().orientation;
+            if (ori == Configuration.ORIENTATION_LANDSCAPE) {
+                Log.i("Themis-#7182", "Step 5: Clicked \"NEXT\" in username and password login with landscape mode.  The crash will occur.");
+            }
+            /** Themis-#7182 */
+
             AuthenticatePayload payload = new AuthenticatePayload(mRequestedUsername, mRequestedPassword);
             mDispatcher.dispatch(AuthenticationActionBuilder.newAuthenticateAction(payload));
         } else {

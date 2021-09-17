@@ -1,6 +1,7 @@
 buildscript {
     repositories {
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.3'
@@ -8,8 +9,9 @@ buildscript {
 }
 
 repositories {
+    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/google'}
     google()
-    jcenter()
     maven { url 'http://wordpress-mobile.github.io/WordPress-Android' }
 }
 

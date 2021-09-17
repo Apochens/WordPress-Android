@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +27,11 @@ public class LoginPrologueFragment extends Fragment {
         view.findViewById(R.id.login_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                /** Themis-#7182 */
+                Log.i("Themis-#7182", "Step 1: Pressed \"LOG IN\" in the welcome page.");
+                /** Themis-#7182 */
+
                 if (mLoginPrologueListener != null) {
                     mLoginPrologueListener.showEmailLoginScreen();
                 }
