@@ -1,7 +1,9 @@
 buildscript {
     repositories {
+        mavenCentral()
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
         google()
-        jcenter()
     }
 
     ext {
@@ -14,10 +16,12 @@ buildscript {
 }
 
 repositories {
+    mavenCentral()
+    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/google'}
     google()
-    jcenter()
     maven { url "https://www.jitpack.io" }
-    maven { url "https://dl.bintray.com/wordpress-mobile/react-native-mirror/" }
+    maven { url "https://a8c-libs.s3.amazonaws.com/android/react-native-mirror" }
 }
 
 apply plugin: 'com.android.library'

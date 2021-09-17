@@ -3,8 +3,10 @@ buildscript {
     ext.navComponenVersion = '2.0.0'
 
     repositories {
+        mavenCentral()
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
         google()
-        jcenter()
     }
 
     dependencies {
@@ -28,9 +30,10 @@ allprojects {
     apply plugin: 'checkstyle'
 
     repositories {
+        mavenCentral()
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
         google()
-        jcenter()
-        maven { url "https://dl.bintray.com/wordpress-mobile/maven" }
         maven { url "https://jitpack.io" }
 
         if (rootProject.ext.buildGutenbergFromSource) {
@@ -41,7 +44,7 @@ allprojects {
                 url "$rootDir/libs/gutenberg-mobile/node_modules/react-native/android"
             }
         } else {
-            maven { url "https://dl.bintray.com/wordpress-mobile/react-native-mirror/" }
+            maven { url "https://a8c-libs.s3.amazonaws.com/android/react-native-mirror" }
         }
     }
 
