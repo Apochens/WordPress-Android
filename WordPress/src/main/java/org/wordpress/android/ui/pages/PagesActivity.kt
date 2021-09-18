@@ -2,6 +2,7 @@ package org.wordpress.android.ui.pages
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.MenuItem
 import kotlinx.android.synthetic.main.pages_fragment.*
 import org.wordpress.android.R
@@ -17,6 +18,10 @@ class PagesActivity : LocaleAwareActivity(),
         BasicDialogNegativeClickInterface {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        /** Themis-#11992 */
+        Log.i("Themis-#11992", "Step 5: Selected the \"Site Pages\", the crash will occur.");
+        /** Themis-#11992 */
 
         setContentView(R.layout.pages_activity)
 

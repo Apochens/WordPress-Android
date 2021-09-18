@@ -1,8 +1,8 @@
 package org.wordpress.android.util.encryptedlogging
 
 import android.util.Base64
-import com.goterl.lazycode.lazysodium.interfaces.SecretStream
-import com.goterl.lazycode.lazysodium.utils.Key
+import com.goterl.lazysodium.interfaces.SecretStream
+import com.goterl.lazysodium.utils.Key
 import java.io.File
 import java.io.FileWriter
 import java.util.UUID

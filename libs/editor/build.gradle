@@ -1,5 +1,9 @@
 buildscript {
     repositories {
+        maven{url"https://dl.google.com/dl/android/maven2/"}
+        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/google'}
+        mavenCentral()
         jcenter()
         google()
     }
@@ -13,7 +17,7 @@ apply plugin: 'com.automattic.android.fetchstyle'
 
 allprojects {
     apply plugin: 'checkstyle'
-    
+
     if (tasks.findByPath('checkstyle') == null) {
         tasks.create(name: 'checkstyle', type: Checkstyle) {
             source 'src'

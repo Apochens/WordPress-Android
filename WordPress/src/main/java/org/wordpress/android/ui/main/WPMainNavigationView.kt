@@ -2,6 +2,7 @@ package org.wordpress.android.ui.main
 
 import android.content.Context
 import android.util.AttributeSet
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
@@ -107,6 +108,17 @@ class WPMainNavigationView @JvmOverloads constructor(
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
+
+        /** Themis-#11992 */
+        if (item.itemId == 2131297249) {
+            Log.i("Themis-#11992", "Step 1: Selected the \"Reader\" page.")
+        }
+
+        if (item.itemId == 2131297250) {
+            Log.i("Themis-#11992", "Step 2: Selected back to the \"My site\" page.")
+        }
+        /** Themis-#11992 */
+
         val position = getPositionForItemId(item.itemId)
         currentPosition = position
         pageListener.onPageChanged(position)

@@ -7,6 +7,7 @@ import android.content.Intent
 import android.graphics.drawable.GradientDrawable
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.os.Bundle
+import android.util.Log
 import android.view.HapticFeedbackConstants
 import android.view.Menu
 import android.view.MenuItem
@@ -136,6 +137,11 @@ class PostsListActivity : LocaleAwareActivity(),
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        /** Themis-#11992 */
+        Log.i("Themis-#11992", "Step 3: Selected the \"Blog Posts\".");
+        /** Themis-#11992 */
+
         (application as WordPress).component().inject(this)
         setContentView(R.layout.post_list_activity)
 
@@ -547,6 +553,11 @@ class PostsListActivity : LocaleAwareActivity(),
 
     override fun onStop() {
         super.onStop()
+
+        /** Themis-#11992 */
+        Log.i("Themis-#11992", "Step 4: Exited the \"Blog Posts\".");
+        /** Themis-#11992 */
+
         EventBus.getDefault().unregister(this)
     }
 }
