@@ -111,11 +111,11 @@ class WPMainNavigationView @JvmOverloads constructor(
 
         /** Themis-#11992 */
         if (item.itemId == 2131297249) {
-            Log.i("Themis-#11992", "Step 1: Selected the \"Reader\" page.")
+            Log.i("Themis", "Step 1: Selected the \"Reader\" page.")
         }
 
         if (item.itemId == 2131297250) {
-            Log.i("Themis-#11992", "Step 2: Selected back to the \"My site\" page.")
+            Log.i("Themis", "Step 2: Selected back to the \"My site\" page.")
         }
         /** Themis-#11992 */
 

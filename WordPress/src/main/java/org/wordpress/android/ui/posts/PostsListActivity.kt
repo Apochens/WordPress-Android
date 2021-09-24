@@ -139,7 +139,7 @@ class PostsListActivity : LocaleAwareActivity(),
         super.onCreate(savedInstanceState)
 
         /** Themis-#11992 */
-        Log.i("Themis-#11992", "Step 3: Selected the \"Blog Posts\".");
+        Log.i("Themis", "Step 3: Selected the \"Blog Posts\".");
         /** Themis-#11992 */
 
         (application as WordPress).component().inject(this)
@@ -555,7 +555,7 @@ class PostsListActivity : LocaleAwareActivity(),
         super.onStop()
 
         /** Themis-#11992 */
-        Log.i("Themis-#11992", "Step 4: Exited the \"Blog Posts\".");
+        Log.i("Themis", "Step 4: Exited the \"Blog Posts\".");
         /** Themis-#11992 */
 
         EventBus.getDefault().unregister(this)
