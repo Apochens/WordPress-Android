@@ -1,11 +1,8 @@
 buildscript {
     repositories {
-        maven{url"https://dl.google.com/dl/android/maven2/"}
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
-//        maven{url "https://art.swirlds.com/artifactory/swirlds/" }
-        mavenCentral()
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
         maven { url 'https://plugins.gradle.org/m2/' }
     }
     dependencies {
@@ -17,13 +14,9 @@ buildscript {
 }
 
 repositories {
-    maven{url"https://dl.google.com/dl/android/maven2/"}
-    maven{url'https://maven.aliyun.com/repository/public'}
+    maven{url'https://maven.aliyun.com/repository/central'}
     maven{url'https://maven.aliyun.com/repository/google'}
-//    maven{url "https://art.swirlds.com/artifactory/swirlds/" }
-    mavenCentral()
-    google()
-    jcenter()
+    maven{url'https://maven.aliyun.com/repository/jcenter'}
     maven { url 'https://zendesk.jfrog.io/zendesk/repo' }
     maven { url "https://www.jitpack.io" }
 
@@ -35,7 +28,7 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 apply plugin: 'se.bjurr.violations.violation-comments-to-github-gradle-plugin'
 apply plugin: 'kotlin-allopen'
-apply plugin: 'jacoco'
+//apply plugin: 'jacoco'
 
 allOpen {
     // allows mocking for classes w/o directly opening them for release builds

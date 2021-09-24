@@ -3,19 +3,9 @@ buildscript {
     ext.navComponenVersion = '2.0.0'
 
     repositories {
-        maven{url"https://dl.google.com/dl/android/maven2/"}
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
-        maven {
-            url 'https://a8c-libs.s3.amazonaws.com/android'
-            content {
-                includeGroup "com.automattic.android"
-            }
-        }
-        gradlePluginPortal()
-        mavenCentral()
-        google()
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
     }
 
     dependencies {
@@ -39,20 +29,9 @@ allprojects {
     apply plugin: 'checkstyle'
 
     repositories {
-        gradlePluginPortal()
-        mavenCentral()
-        maven{url"https://dl.google.com/dl/android/maven2/"}
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
-        mavenCentral()
-        maven {
-            url 'https://a8c-libs.s3.amazonaws.com/android'
-            content {
-                includeGroup "com.automattic.android"
-            }
-        }
-        google()
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
         maven { url "https://jitpack.io" }
 
         if (rootProject.ext.buildGutenbergFromSource) {

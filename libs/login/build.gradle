@@ -1,10 +1,8 @@
 buildscript {
     repositories {
-        maven{url"https://dl.google.com/dl/android/maven2/"}
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
-        mavenCentral()
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
     }
 
     dependencies {
@@ -18,12 +16,9 @@ allprojects {
     apply plugin: 'checkstyle'
 
     repositories {
-        maven{url"https://dl.google.com/dl/android/maven2/"}
-        maven{url'https://maven.aliyun.com/repository/public'}
+        maven{url'https://maven.aliyun.com/repository/central'}
         maven{url'https://maven.aliyun.com/repository/google'}
-        mavenCentral()
-        google()
-        jcenter()
+        maven{url'https://maven.aliyun.com/repository/jcenter'}
     }
 
     if (tasks.findByPath('checkstyle') == null) {
