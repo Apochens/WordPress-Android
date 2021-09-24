@@ -11,7 +11,7 @@ buildscript {
 
 apply plugin: 'com.android.library'
 apply plugin: 'com.novoda.bintray-release'
-apply plugin: 'jacoco'
+//apply plugin: 'jacoco'
 
 repositories {
     maven{url'https://maven.aliyun.com/repository/public'}

@@ -22,7 +22,7 @@ repositories {
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
 apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'jacoco'
+//apply plugin: 'jacoco'
 
 android {
     useLibrary 'org.apache.http.legacy'

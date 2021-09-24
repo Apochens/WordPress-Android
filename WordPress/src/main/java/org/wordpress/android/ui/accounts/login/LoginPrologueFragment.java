@@ -29,7 +29,7 @@ public class LoginPrologueFragment extends Fragment {
             public void onClick(View v) {
 
                 /** Themis-#7182 */
-                Log.i("Themis-#7182", "Step 1: Pressed \"LOG IN\" in the welcome page.");
+                Log.i("Themis", "Step 1: Pressed \"LOG IN\" in the welcome page.");
                 /** Themis-#7182 */
 
                 if (mLoginPrologueListener != null) {

@@ -165,7 +165,7 @@ public class LoginSiteAddressFragment extends LoginBaseFormFragment<LoginListene
         mDispatcher.dispatch(SiteActionBuilder.newFetchWpcomSiteByUrlAction(cleanedXmlrpcSuffix));
 
         /** Themis-#7182 */
-        Log.i("Themis-#7182", "Step 3: Clicked \"NEXT\" in site address login.");
+        Log.i("Themis", "Step 3: Clicked \"NEXT\" in site address login.");
         /** Themis-#7182 */
 
         startProgress();
