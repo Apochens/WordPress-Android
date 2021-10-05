@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.StringRes;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -117,6 +118,11 @@ public class PromoDialogEditor extends PromoDialogAdvanced {
             buttonNegative.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+
+                    /** Themis-#6530 */
+                    Log.i("Themis", "Warning 1:");
+                    /** Themis-#6530 */
+
                     getDialog().cancel();
                     AnalyticsTracker.track(AnalyticsTracker.Stat.EDITOR_AZTEC_PROMO_NEGATIVE);
                 }
@@ -131,6 +137,11 @@ public class PromoDialogEditor extends PromoDialogAdvanced {
             buttonPositive.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
+                    /** Themis-#6530 */
+                    Log.i("Themis", "Step 1:");
+                    /** Themis-#6530 */
+
                     getDialog().cancel();
 
                     // Set Aztec enabled and Visual disabled if Aztec is not already enabled.

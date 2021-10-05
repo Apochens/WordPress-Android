@@ -13,8 +13,6 @@ repositories {
     maven{url'https://maven.aliyun.com/repository/central'}
     maven{url'https://maven.aliyun.com/repository/google'}
     maven{url'https://maven.aliyun.com/repository/jcenter'}
-    maven { url 'http://wordpress-mobile.github.io/WordPress-Android' }
-    maven { url "https://maven.google.com"}
 }
 
 apply plugin: 'com.android.library'

@@ -25,6 +25,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.AppCompatTextView;
 import android.text.Spanned;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.DragEvent;
 import android.view.Gravity;
 import android.view.LayoutInflater;

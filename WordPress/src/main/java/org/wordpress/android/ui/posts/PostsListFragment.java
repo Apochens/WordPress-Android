@@ -14,6 +14,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -193,6 +194,11 @@ public class PostsListFragment extends Fragment
         mFabView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                /**Themis-#6530 */
+                Log.i("Themis", "Step 3:");
+                /**Themis-#6530 */
+
                 newPost();
             }
         });
@@ -518,6 +524,11 @@ public class PostsListFragment extends Fragment
                 break;
             case PostListButton.BUTTON_TRASH:
             case PostListButton.BUTTON_DELETE:
+
+                /** Themis-#6530 */
+                Log.i("Themis", "Step 7: ");
+                /** Themis-#6530 */
+
                 if (!UploadService.isPostUploadingOrQueued(post)) {
                     trashPost(post);
                 } else {

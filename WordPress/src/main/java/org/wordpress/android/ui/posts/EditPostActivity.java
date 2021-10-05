@@ -30,6 +30,7 @@ import android.text.Spanned;
 import android.text.TextUtils;
 import android.text.style.CharacterStyle;
 import android.text.style.SuggestionSpan;
+import android.util.Log;
 import android.view.DragEvent;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -642,6 +643,11 @@ public class EditPostActivity extends AppCompatActivity implements
         }
 
         if (mEditorFragment instanceof AztecEditorFragment) {
+
+            /** Themis-#6530 */
+            Log.i("Themis", "Step 4:");
+            /** Themis-#6530 */
+
             ((AztecEditorFragment)mEditorFragment).enableMediaMode(true);
         }
     }
@@ -701,6 +707,10 @@ public class EditPostActivity extends AppCompatActivity implements
                 trackAddMediaFromDeviceEvents(false, isVideo, uri);
             }
         }
+
+        /** Themis-#6530 */
+        Log.i("Themis", "Step 5:" + uriList.size());
+        /** Themis-#6530 */
     }
 
     /*
@@ -823,6 +833,11 @@ public class EditPostActivity extends AppCompatActivity implements
         int itemId = item.getItemId();
 
         if (itemId == android.R.id.home) {
+
+            /** Themis-#6530 */
+            Log.i("Themis", "Step 6:");
+            /** Themis-#6530 */
+
             return handleBackPressed();
         }
 
