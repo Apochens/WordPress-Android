@@ -166,7 +166,7 @@ public class LoginEmailFragment extends LoginBaseFormFragment<LoginListener> imp
                     } else {
 
                         /** Themis-#6986 */
-                        Log.i("Themis", "Step 2: Clicked \""+getString(R.string.enter_site_address_instead)+"\" in the email login page.");
+                        Log.i("Themis", "Event 2: Clicked \""+getString(R.string.enter_site_address_instead)+"\" in the email login page.");
                         /** Themis-#6986 */
 
                         mLoginListener.loginViaSiteAddress();

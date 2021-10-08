@@ -10,6 +10,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.google.android.gms.auth.api.credentials.Credential;
@@ -56,6 +57,7 @@ import javax.inject.Inject;
 import dagger.android.AndroidInjector;
 import dagger.android.DispatchingAndroidInjector;
 import dagger.android.support.HasSupportFragmentInjector;
+import de.greenrobot.event.EventBusException;
 
 public class LoginActivity extends AppCompatActivity implements ConnectionCallbacks, OnConnectionFailedListener,
         Callback, LoginListener, GoogleLoginListener, LoginPrologueListener, HasSupportFragmentInjector {
@@ -495,8 +497,13 @@ public class LoginActivity extends AppCompatActivity implements ConnectionCallba
     @Override
     public void saveCredentialsInSmartLock(@Nullable final String username, @Nullable final String password,
                                            @NonNull final String displayName, @Nullable final Uri profilePicture) {
-        mSmartLockHelper.saveCredentialsInSmartLock(StringUtils.notNullStr(username), StringUtils.notNullStr(password),
-                displayName, profilePicture);
+        try {
+            mSmartLockHelper.saveCredentialsInSmartLock(StringUtils.notNullStr(username), StringUtils.notNullStr(password),
+                    displayName, profilePicture);
+        } catch (NullPointerException e) {
+            Log.i("Themis", "Crash!: EventBusException.");
+            throw e;
+        }
     }
 
     @Override

@@ -216,7 +216,7 @@ public class LoginUsernamePasswordFragment extends LoginBaseFormFragment<LoginLi
         /** Themis-#7182 */
         int ori = this.getResources().getConfiguration().orientation;
         if (ori == Configuration.ORIENTATION_LANDSCAPE) {
-            Log.i("Themis", "Step 4: Changed screen to landscape.");
+            Log.i("Themis", "Event 4: Changed screen to landscape.");
 
         }
         /** Themis-#7182 */
@@ -300,7 +300,7 @@ public class LoginUsernamePasswordFragment extends LoginBaseFormFragment<LoginLi
             /** Themis-#7182 */
             int ori = this.getResources().getConfiguration().orientation;
             if (ori == Configuration.ORIENTATION_LANDSCAPE) {
-                Log.i("Themis", "Step 5: Clicked \"NEXT\" in username and password login with landscape mode.  The crash will occur.");
+                Log.i("Themis", "Event 5: Clicked \"NEXT\" in username and password login with landscape mode.  The crash will occur.");
             }
             /** Themis-#7182 */
 
