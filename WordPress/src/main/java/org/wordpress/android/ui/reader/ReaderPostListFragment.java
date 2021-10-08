@@ -13,6 +13,7 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.TextUtils;
 import android.text.style.ImageSpan;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -822,7 +823,12 @@ public class ReaderPostListFragment extends Fragment
         outState.putBoolean(ReaderConstants.KEY_WAS_PAUSED, mWasPaused);
         outState.putBoolean(ReaderConstants.KEY_ALREADY_UPDATED, mHasUpdatedPosts);
         outState.putBoolean(ReaderConstants.KEY_FIRST_LOAD, mFirstLoad);
-        outState.putBoolean(ReaderConstants.KEY_IS_REFRESHING, mRecyclerView.isRefreshing());
+        try {
+            outState.putBoolean(ReaderConstants.KEY_IS_REFRESHING, mRecyclerView.isRefreshing());
+        } catch (NullPointerException e) {
+            Log.i("Themis", "Crash!: NullPointerException.");
+            throw e;
+        }
         outState.putInt(ReaderConstants.KEY_RESTORE_POSITION, getCurrentPosition());
         outState.putSerializable(ReaderConstants.ARG_POST_LIST_TYPE, getPostListType());
         outState.putBoolean(ReaderConstants.ARG_IS_TOP_LEVEL, mIsTopLevel);

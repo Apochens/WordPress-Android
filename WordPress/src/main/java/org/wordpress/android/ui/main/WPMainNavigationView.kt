@@ -108,18 +108,18 @@ class WPMainNavigationView @JvmOverloads constructor(
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-
-        /** Themis-#11992 */
-        if (item.itemId == 2131297249) {
-            Log.i("Themis", "Step 1: Selected the \"Reader\" page.")
-        }
-
-        if (item.itemId == 2131297250) {
-            Log.i("Themis", "Step 2: Selected back to the \"My site\" page.")
-        }
-        /** Themis-#11992 */
-
         val position = getPositionForItemId(item.itemId)
+
+        /** Themis-#11992 */
+        if (position == 1) {
+            Log.i("Themis", "Event 1: Selected the \"Reader\" page.")
+        }
+
+        if (position == 0) {
+            Log.i("Themis", "Event 2: Selected back to the \"My site\" page.")
+        }
+        /** Themis-#11992 */
+
         currentPosition = position
         pageListener.onPageChanged(position)
         return true
