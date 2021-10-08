@@ -20,7 +20,7 @@ class PagesActivity : LocaleAwareActivity(),
         super.onCreate(savedInstanceState)
 
         /** Themis-#11992 */
-        Log.i("Themis", "Event 5: Selected the \"Site Pages\", the crash will occur.");
+        Log.i("Themis", "Event 5: Selected the \"Site Pages\".");
         /** Themis-#11992 */
 
         setContentView(R.layout.pages_activity)
