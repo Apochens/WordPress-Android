@@ -176,7 +176,7 @@ public class MeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (mAccountStore.hasAccessToken()) {
-                    signOutWordPressComWithConfirmation();
+//                    signOutWordPressComWithConfirmation();
                 } else {
                     ActivityLauncher.showSignInForResult(getActivity());
                 }
