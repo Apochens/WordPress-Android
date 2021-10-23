@@ -147,7 +147,7 @@ public class MeFragment extends Fragment implements WPMainActivity.OnScrollToTop
 
         rootView.findViewById(R.id.row_logout).setOnClickListener(v -> {
             if (mAccountStore.hasAccessToken()) {
-                signOutWordPressComWithConfirmation();
+//                signOutWordPressComWithConfirmation();
             } else {
                 ActivityLauncher.showSignInForResult(getActivity());
             }
