@@ -120,7 +120,7 @@ public class PromoDialogEditor extends PromoDialogAdvanced {
                 public void onClick(View view) {
 
                     /** Themis-#6530 */
-                    Log.i("Themis", "Warning 1:");
+                    Log.i("Themis", "Warning 1: Chose \"Not now\" to close the dialog. The crash wouldn't occur.");
                     /** Themis-#6530 */
 
                     getDialog().cancel();
@@ -139,7 +139,7 @@ public class PromoDialogEditor extends PromoDialogAdvanced {
                 public void onClick(View v) {
 
                     /** Themis-#6530 */
-                    Log.i("Themis", "Step 1:");
+                    Log.i("Themis", "Event 1: Chose \"Try it\" to enable new editor.");
                     /** Themis-#6530 */
 
                     getDialog().cancel();

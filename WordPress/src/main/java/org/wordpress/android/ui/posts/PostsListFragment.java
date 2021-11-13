@@ -196,7 +196,7 @@ public class PostsListFragment extends Fragment
             public void onClick(View v) {
 
                 /**Themis-#6530 */
-                Log.i("Themis", "Step 3:");
+                Log.i("Themis", "Event 3: Clicked the floating act button to create a new post.");
                 /**Themis-#6530 */
 
                 newPost();
@@ -526,7 +526,7 @@ public class PostsListFragment extends Fragment
             case PostListButton.BUTTON_DELETE:
 
                 /** Themis-#6530 */
-                Log.i("Themis", "Step 7: ");
+                Log.i("Themis", "Event 7: Pressed the \"Delete\" button in the post list card view.");
                 /** Themis-#6530 */
 
                 if (!UploadService.isPostUploadingOrQueued(post)) {

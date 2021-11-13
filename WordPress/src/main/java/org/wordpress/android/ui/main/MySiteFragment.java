@@ -223,7 +223,7 @@ public class MySiteFragment extends Fragment
             public void onClick(View v) {
 
                 /** Themis-#6530 */
-                Log.i("Themis", "Step 2: Click the \"Blog posts\".");
+                Log.i("Themis", "Event 2: Clicked the \"Blog posts\" at the main.");
                 /** Themis-#6530 */
 
                 ActivityLauncher.viewCurrentBlogPosts(getActivity(), getSelectedSite());

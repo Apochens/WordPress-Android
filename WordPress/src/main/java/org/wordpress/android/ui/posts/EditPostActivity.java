@@ -645,7 +645,7 @@ public class EditPostActivity extends AppCompatActivity implements
         if (mEditorFragment instanceof AztecEditorFragment) {
 
             /** Themis-#6530 */
-            Log.i("Themis", "Step 4:");
+            Log.i("Themis", "Event 4: Clicked the \"+\" to open media window.");
             /** Themis-#6530 */
 
             ((AztecEditorFragment)mEditorFragment).enableMediaMode(true);
@@ -709,7 +709,7 @@ public class EditPostActivity extends AppCompatActivity implements
         }
 
         /** Themis-#6530 */
-        Log.i("Themis", "Step 5:" + uriList.size());
+        Log.i("Themis", "Event 5: Added media files to post: " + uriList.size());
         /** Themis-#6530 */
     }
 
@@ -835,7 +835,7 @@ public class EditPostActivity extends AppCompatActivity implements
         if (itemId == android.R.id.home) {
 
             /** Themis-#6530 */
-            Log.i("Themis", "Step 6:");
+            Log.i("Themis", "Event 6: Pressed the Back button.");
             /** Themis-#6530 */
 
             return handleBackPressed();
