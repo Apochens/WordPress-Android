@@ -553,11 +553,6 @@ class PostsListActivity : LocaleAwareActivity(),
 
     override fun onStop() {
         super.onStop()
-
-        /** Themis-#11992 */
-        Log.i("Themis", "Event 4: Exited the \"Blog Posts\".");
-        /** Themis-#11992 */
-
         EventBus.getDefault().unregister(this)
     }
 }
